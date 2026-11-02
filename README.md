@@ -12,6 +12,4 @@ about.html        Education, skills, honors, contact
 styles.css        All styling (edit :root colors to re-theme)
 script.js         Mobile nav + current-page highlight
 assets/           Resume PDF, images, pitch video
-ELEVATOR_PITCH.md Script + variants for the spoken sample
-PLANNING.md       Answers to the CxC worksheets (for your faculty advisor)
 ```
