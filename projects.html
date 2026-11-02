@@ -52,9 +52,7 @@
           <a href="#chevron-bot">Chevron chatbot</a>
           <a href="#shell">Shell seal analysis</a>
           <a href="#abt-global">Abt Global AI Studio</a>
-          <a href="#resource-requests">Resource-request extraction</a>
           <a href="#jane-eyre">Jane Eyre × Lana Del Rey</a>
-          <a href="#coursework">Coursework</a>
         </div>
       </div>
     </section>
@@ -68,49 +66,51 @@
         <div class="project-grid">
           <div>
             <div class="kicker">01 · Honors capstone thesis · LSU RISE Lab · Dr. Felipe Fronchetti · <span class="status">In progress</span></div>
-            <h2>PATRICIA: virtual-patient communication training</h2>
+            <h2>Virtual-patient communication training</h2>
             <p>
-              A simulation application that lets healthcare learners practice difficult conversations — such as
-              substance-use discussions — with AI-driven virtual patients and family members, then receive feedback on
-              both what they covered and how they communicated. I own the <strong>Coaching AI</strong>: the part of the
-              system that decides whether a learner actually met each communication objective, and tells them why.
+              A simulation application where healthcare learners practice difficult conversations — such as
+              substance-use discussions — with AI-driven virtual patients and family members, then get feedback on both
+              what they covered and how they communicated. I'm building it with teammates Jenah Mansour and Nour Khalifa,
+              and my part is the <strong>Coaching AI</strong>: the system that will decide whether a learner met each
+              communication objective, and explain why.
             </p>
             <div class="tags">
               <span class="tag tech">Technological</span>
               <span class="tag written">Written</span>
-              <span class="tag plain">LLM prompt engineering</span><span class="tag plain">Rubric design</span><span class="tag plain">Unity integration</span><span class="tag plain">Evaluation</span>
+              <span class="tag plain">LLM prompt engineering</span><span class="tag plain">Rubric design</span><span class="tag plain">Evaluation</span>
             </div>
             <details open>
-              <summary>My contribution: the Coaching AI</summary>
+              <summary>What I'm building: the Coaching AI</summary>
+              <p><small>This work is in progress. The sections below describe my plan for the system and my thesis.</small></p>
               <h4>Turning a rubric into something a model can check</h4>
               <p>
                 "Showed empathy" or "asked about substance use without judgment" is easy for an instructor to recognize and
-                hard for software to detect. I build representations of each objective's completion conditions and rubric so
-                the system can determine, from the conversation transcript, whether an objective was met.
+                hard for software to detect. I'll build representations of each objective's completion conditions and rubric
+                so the system can tell, from the conversation, whether an objective was met.
               </p>
               <h4>Feedback tied to evidence</h4>
               <p>
-                A score alone doesn't teach anything. The Coaching AI generates feedback that points to the specific moments
-                in the conversation behind each judgment, so learners can see what worked and what to try differently.
+                A score alone doesn't teach anything. The Coaching AI will generate feedback that points to the specific
+                moments in the conversation behind each judgment, so learners can see what worked and what to try differently.
               </p>
               <h4>Coaching that adapts to the learner</h4>
               <p>
-                A beginner needs more guidance during a conversation; an expert needs to be left alone. I'm implementing
-                beginner, intermediate, and expert coaching policies that change when and how the system intervenes, and
-                defining the report payload that delivers results to the Unity front end.
+                A beginner needs more guidance during a conversation; an expert needs to be left alone. I plan to implement
+                beginner, intermediate, and expert coaching policies that change when and how the system steps in, and to
+                define the report that passes results to the Unity application my teammates are building.
               </p>
               <h4>Measuring whether it's right</h4>
               <p>
-                My honors thesis centers on this system and a bounded validation study: comparing the Coaching AI's judgments
-                on objective completion and feedback quality against human-reviewed annotations, with error analysis of where
-                and why they disagree.
+                My honors thesis will center on this system and a bounded validation study: comparing the Coaching AI's
+                judgments on objective completion and feedback quality against human-reviewed annotations, with error
+                analysis of where and why they disagree.
               </p>
-                          <p class="related">The Coaching AI builds on the prompt engineering I first did for <a href="#shell">Shell's seal-inspection system</a>.</p>
+              <p class="related">The Coaching AI builds on the prompt engineering I first did for <a href="#shell">Shell's seal-inspection system</a>.</p>
             </details>
           </div>
           <figure class="figure">
-            <img src="assets/patricia-main-menu.jpg" alt="PATRICIA patient communication training prototype in Unity: welcome screen with Start Training, Select Chapter, View Progress, and Settings buttons beside a virtual practice guide in scrubs." loading="lazy">
-            <figcaption>PATRICIA prototype main menu in Unity — six conversation scenarios across three difficulty levels. The Coaching AI powers the feedback and progress views.</figcaption>
+            <img src="assets/patricia-main-menu.jpg" alt="Patient communication training prototype in Unity: welcome screen with Start Training, Select Chapter, View Progress, and Settings buttons beside a virtual practice guide in scrubs." loading="lazy">
+            <figcaption>The team's current Unity prototype, which offers six conversation scenarios across three difficulty levels. The Coaching AI will power its feedback and progress views.</figcaption>
           </figure>
         </div>
       </article>
@@ -119,55 +119,55 @@
       <article class="project" id="roomies">
         <div class="project-grid">
           <div>
-            <div class="kicker">02 · Software engineering course · Team of five · <span class="status">In progress</span></div>
+            <div class="kicker">02 · CSC 4330: Software Systems Development · Dr. Anas Mahmoud · Team of five · <span class="status">In progress</span></div>
             <h2>Roomies: a roommate management app</h2>
             <p>
-              A mobile app concept for shared living — chores, expenses, house rules, and the awkward conversations in
-              between. Our team took it from a vision card and market analysis through user stories and non-functional
-              requirements into high-fidelity design.
+              A mobile app for shared living: chores, expenses, house rules, maintenance requests, and the conversations
+              in between. It serves three kinds of users (residents, resident assistants, and property managers), and our
+              team has taken it from a vision card and user stories through lo-fi and hi-fi design.
             </p>
             <div class="tags">
-              <span class="tag visual">Visual</span>
               <span class="tag written">Written</span>
-              <span class="tag plain">Figma</span><span class="tag plain">Hi-fi wireframes</span><span class="tag plain">User journey maps</span>
+              <span class="tag visual">Visual</span>
+              <span class="tag plain">Design review</span><span class="tag plain">Screen descriptions</span><span class="tag plain">User journey maps</span>
             </div>
             <details open>
               <summary>My contribution</summary>
-              <h4>High-fidelity wireframes in Figma</h4>
+              <h4>Reviewing the design as it evolved</h4>
               <p>
-                I designed the hi-fi screens for onboarding, the home dashboard, and the app's core feature set, with
-                written descriptions explaining the intent behind each screen so teammates and reviewers could follow the
-                design reasoning without a walkthrough.
+                I incrementally reviewed the team's lo-fi and hi-fi designs as they developed, checking that each version
+                stayed true to our user stories and that the jump from lo-fi to hi-fi didn't lose anything along the way.
               </p>
-              <h4>Onboarding that's friendly but safe</h4>
+              <h4>Writing the screens into words</h4>
               <p>
-                Roomies serves residents, resident assistants, and property managers — three roles with very different
-                permissions. The onboarding lets anyone pick the role that fits, but makes clear that choosing "RA" or
-                "Landlord" doesn't unlock anything on its own: those dashboards require a verified account, an invitation
-                code, or administrator approval. Warm illustration and plain language keep that security step from feeling
-                like a wall.
+                I wrote the descriptions for the hi-fi screens, so the link between the two design stages is clear to anyone
+                reading them. They explain three things a screenshot can't:
               </p>
-              <h4>Making the app worth opening</h4>
+              <ul>
+                <li><strong>The onboarding flow:</strong> how a new user gets from the welcome screen into the right household and role.</li>
+                <li><strong>Role-based privacy:</strong> why choosing "RA" or "Landlord" never unlocks those dashboards on its own, and what verification does.</li>
+                <li><strong>Gamified features:</strong> how nudges and rewards are meant to make keeping up with shared responsibilities feel less like a chore.</li>
+              </ul>
+              <h4>Every user, every journey</h4>
               <p>
-                A chore app nobody opens is useless. I explored engagement features — gentle nudges and light gamification —
-                so that the app rewards keeping up with shared responsibilities instead of just nagging about them.
+                I made sure our user journey maps covered each user-story perspective (the resident, the RA, and the property
+                manager), so that no one's path through the app was left out.
               </p>
-              <h4>User journey mapping</h4>
-              <p>
-                I mapped a roommate's journey from signup through their first resolved conflict, which surfaced gaps between
-                what our user stories promised and what the screens actually supported.
-              </p>
-                          <p class="related">The design side of my work comes from my <a href="about.html#education">Digital Media Arts &amp; Engineering minor</a>; my <a href="#jane-eyre"><em>Jane Eyre</em> × Lana Del Rey site</a> is another example.</p>
+              <p class="related">For a website I designed and built myself, see <a href="#jane-eyre"><em>Jane Eyre</em> × Lana Del Rey</a>.</p>
             </details>
           </div>
           <div>
             <figure class="figure">
-              <img src="assets/roomies-hifi.jpg" alt="Three Roomies hi-fi mobile screens in Figma: a welcome screen reading Better living, together with Get Started and Log In buttons; a role picker for Resident, Resident Assistant, or Landlord; and a Resident Assistant login screen." loading="lazy">
-              <figcaption>My hi-fi Figma screens: welcome, role selection, and verified RA login. Role choice alone never grants access — professional roles require an invitation or admin approval.</figcaption>
+              <img src="assets/roomies-resident-journey.jpg" alt="Roomies resident journey map with five stages: login, explore home, manage responsibilities, report an issue, and follow up. Rows show activities, a feelings curve from neutral to confident, dipping to frustrated, then relieved, and customer expectations." loading="lazy">
+              <figcaption>The resident journey map, one of the three perspectives I made sure our maps covered. The feelings curve dips at "Report an issue," the moment the app most needs to help.</figcaption>
+            </figure>
+            <figure class="figure" style="margin-top:1rem;">
+              <img src="assets/roomies-hifi.jpg" alt="Three Roomies hi-fi mobile screens: a welcome screen reading Better living, together; a role picker for Resident, Resident Assistant, or Landlord; and a Resident Assistant login screen." loading="lazy">
+              <figcaption>Team hi-fi screens for onboarding and role selection, part of the flow my screen descriptions explain.</figcaption>
             </figure>
             <figure class="figure" style="margin-top:1rem; display:flex; align-items:center; gap:1rem; padding:1rem;">
               <img src="assets/roomies-logo.png" alt="Roomies app icon: two friendly blob characters, one blue and one green, under a house roofline." loading="lazy" style="width:72px; height:auto; border-radius:16px;">
-              <figcaption style="padding:0;">The Roomies app icon — two roommates under one roof. The palette carries through every screen.</figcaption>
+              <figcaption style="padding:0;">The Roomies app icon: two roommates under one roof.</figcaption>
             </figure>
           </div>
         </div>
@@ -179,7 +179,7 @@
       <article class="project" id="powercast" style="border-top:0; padding-top:1rem;">
         <div class="project-grid">
           <div>
-            <div class="kicker">03 · SDMI research · 2025–2026</div>
+            <div class="kicker">03 · SDMI research · Robert Iles · <span class="status">In progress</span></div>
             <h2>POWERCAST: predicting hurricane power outages by parish</h2>
             <p>
               A machine-learning pipeline that estimates how many customers in each Louisiana parish will lose power
@@ -222,7 +222,7 @@
                 Every phase is written up as a technical note for my supervisor and teammates: what was done, what broke,
                 and what we decided. Those notes are the reason the next person can pick the pipeline up without me.
               </p>
-                          <p class="related">Part of my <a href="experience.html#exp-sdmi">research role at SDMI</a>, alongside the <a href="#resource-requests">resource-request pipeline</a>.</p>
+                          <p class="related">Part of my <a href="experience.html#exp-sdmi">research role at SDMI</a>, where I also build LLM-based tools for disaster-response data.</p>
             </details>
           </div>
           <div>
@@ -240,7 +240,7 @@
       <!-- ============ 04 POINT CLOUD ============ -->
       <article class="project" id="point-cloud">
         <div style="max-width:760px;">
-            <div class="kicker">04 · AISx Lab · National Park Service–funded · 2026</div>
+            <div class="kicker">04 · AISx Lab · Dr. James Ghawaly · National Park Service–funded · <span class="status">In progress</span></div>
             <h2>3D computer-vision benchmark for historic structures</h2>
             <p>
               Historic buildings are scanned with LiDAR and photogrammetry, but a computer can't analyze a structure it
@@ -266,10 +266,10 @@
                 When reference PDFs weren't available for a scan, I wrote a Python script that extracts the embedded
                 photographs from the raw .e57 scan files, giving the team visual context to label against.
               </p>
-              <h4>Coordinating with a partner annotator</h4>
+              <h4>Working with the lab</h4>
               <p>
-                Labeling conventions only work if everyone follows them. I coordinate with a fellow annotator to resolve
-                disagreements and keep the conventions document current as new building types appear.
+                Labeling conventions only work if everyone applies them the same way. I work with PhD student Ahmad Hadi to
+                resolve edge cases and keep labels consistent across scenes.
               </p>
                           <p class="related">Part of my <a href="experience.html#exp-aisx">research assistantship at the AISx Lab</a>.</p>
             </details>
@@ -326,7 +326,7 @@
       <article class="project" id="shell">
         <div class="project-grid">
           <div>
-            <div class="kicker">06 · HNRS 3025: LLM Development for Business · Sponsored by Shell · Spring 2025</div>
+            <div class="kicker">06 · HNRS 3025: LLM Development for Business · Dr. James Ghawaly · Sponsored by Shell · Spring 2025</div>
             <h2>Shell Yeah! — AI vision for security-seal compliance</h2>
             <p>
               Shell hopper railcars carry a security seal that has to be intact and correctly placed before the car moves.
@@ -358,7 +358,7 @@
               <p>
                 The semester ended with a final presentation of the completed system to Shell.
               </p>
-                          <p class="related">Reporting to a sponsor every week was practice for the <a href="experience.html#leadership">daily standups at Chevron</a> that summer. The prompt-engineering experience led directly to my role on <a href="#virtual-patient">PATRICIA's Coaching AI</a>.</p>
+                          <p class="related">Reporting to a sponsor every week was practice for the <a href="experience.html#leadership">daily standups at Chevron</a> that summer. The prompt-engineering experience led directly to my role on the <a href="#virtual-patient">virtual-patient training project</a>.</p>
             </details>
             <p style="margin-top:1rem;">
               <a href="https://www.linkedin.com/posts/madison-harman-290242289_ai-llm-computervision-activity-7330211863852384256-KEgb/" target="_blank" rel="noopener">Read my LinkedIn post about the project ↗</a>
@@ -424,39 +424,13 @@
         </div>
       </article>
 
-      <!-- ============ 08 RESOURCE REQUESTS ============ -->
-      <article class="project" id="resource-requests">
-        <div style="max-width:760px;">
-            <div class="kicker">08 · SDMI · Disaster response</div>
-            <h2>LLM-based extraction of emergency resource requests</h2>
-            <p>
-              During a hurricane response, requests for generators, water, cots, and fuel arrive as free text in mission
-              spreadsheets. I contributed to a pipeline that uses a large language model to extract and categorize those
-              physical resources, validates the output, and writes GeoJSON so requests can be mapped.
-            </p>
-            <div class="tags">
-              <span class="tag tech">Technological</span>
-              <span class="tag plain">Python</span><span class="tag plain">LLM / GPT-4o-mini</span><span class="tag plain">GeoJSON</span>
-            </div>
-            <details>
-              <summary>My contribution</summary>
-              <p>
-                I fixed classification errors, added canonicalization logic so "gen", "generator", and "generators" resolve
-                to one resource type, implemented GeoJSON output for mapping, and added checkpoint/resume support so a
-                long-running job can recover from an interruption without reprocessing everything.
-              </p>
-                          <p class="related">Also part of my <a href="experience.html#exp-sdmi">SDMI role</a>; see <a href="#powercast">POWERCAST</a> for the other side of that work.</p>
-            </details>
-          </div>
-      </article>
+      <h2 class="eyebrow" style="margin-top:3rem;">Creative work</h2>
 
-      <h2 class="eyebrow" style="margin-top:3rem;">Creative &amp; coursework</h2>
-
-      <!-- ============ 09 JANE EYRE ============ -->
+      <!-- ============ 08 JANE EYRE ============ -->
       <article class="project" id="jane-eyre" style="border-top:0; padding-top:1rem;">
         <div class="project-grid">
           <div>
-            <div class="kicker">09 · HNRS 2030 Un-Essay · Spring 2024</div>
+            <div class="kicker">08 · HNRS 2030 Un-Essay · Spring 2024</div>
             <h2>Power, God, and Love: <em>Jane Eyre</em> × Lana Del Rey</h2>
             <p>
               An honors "un-essay" that argues a literary thesis through a website instead of a paper. While reading
@@ -485,7 +459,7 @@
                 historical context and its literary representations. The analysis traces how personal growth and romance
                 intertwine in Western culture, and argues that change is essential to growing as a person.
               </p>
-                          <p class="related">Where my CS major first met my <a href="about.html#education">Digital Media Arts &amp; Engineering minor</a>, a combination that also shapes <a href="#roomies">Roomies</a>.</p>
+                          <p class="related">Where my CS major first met my <a href="about.html#education">Digital Media Arts &amp; Engineering minor</a>, a combination I keep coming back to.</p>
             </details>
             <p style="margin-top:1rem;">
               <a href="https://madisonharman.github.io/Jane-Eyre.x.Lana-Del-Rey/" target="_blank" rel="noopener">Visit the site ↗</a> ·
@@ -501,45 +475,16 @@
         </div>
       </article>
 
-      <!-- ============ 10 COURSEWORK ============ -->
-      <article class="project" id="coursework">
-        <div class="kicker">10 · Selected systems coursework</div>
-        <h2>Work that keeps me honest.</h2>
-        <p class="lede">Research is my focus, but I like knowing what's under the floorboards.</p>
-        <div class="grid-3" style="margin-top:1.5rem;">
-          <div class="card">
-            <h3>Multi-mode HTTP server in C</h3>
-            <p>Implemented fork-, thread-, and pool-based concurrency models for a web server from scratch; full marks on the assignment.</p>
-            <div class="tags"><span class="tag tech">Technological</span></div>
-          </div>
-          <div class="card">
-            <h3>Geaux-to-C compiler code generator</h3>
-            <p>Team project: built a three-pass code emitter with global variable scoping and fixed AST mismatches between front- and back-end.</p>
-            <div class="tags"><span class="tag tech">Technological</span></div>
-          </div>
-          <div class="card">
-            <h3>Digital forensics investigation</h3>
-            <p>Analyzed a disk image and packet capture to reconstruct an incident, delivered as a formal written report and a presentation.</p>
-            <div class="tags"><span class="tag written">Written</span><span class="tag spoken">Spoken</span></div>
-          </div>
-        </div>
-      </article>
-
       <!-- ============ CREDITS ============ -->
       <section id="credits" style="padding-top:3rem;">
         <span class="eyebrow">Credits &amp; collaboration</span>
         <h2 style="font-size:1.5rem;">Who I worked with.</h2>
         <p>
-          The PATRICIA virtual-patient training application is an Honors capstone team project at the LSU RISE Laboratory under Dr. Felipe Fronchetti; I own the
-          Coaching AI component, and teammates build the Unity application and virtual characters. Roomies was designed with Elizabeth Odukoya, Alexandra Hawk, Jenah Mansour, and Nour Khalifa;
-          the Figma hi-fi screens, app icon, and journey map are my individual work. POWERCAST and the resource-request pipeline are
-          SDMI team projects supervised by Robert Iles. The 3D benchmark is led by Dr. Ghawaly at the AISx Lab.
-          <em>Shell Yeah!</em> was built with Garrett Wainright, Fahd Khattak, Damien Nguyen, Hammaad Alam, Serene Qasem,
-          and Kameron Arceneaux for HNRS 3025, sponsored by Shell. The Abt Global AI Studio project was a five-person
-          Break Through Tech team; the repository is shared. Chevron descriptions exclude internal code, data, and
-          screenshots. The <em>Jane Eyre</em> × Lana Del Rey site is my individual work; song references are to Lana Del Rey's
-          published recordings, and the novel is Charlotte Brontë's. All photographs and figures are my own or my teams' unless
-          captioned otherwise.
+          Most of the work on this page was done in teams, and I'm grateful to everyone I've built it with. Thank you to the
+          LSU RISE Laboratory and Dr. Felipe Fronchetti; my CSC 4330 Roomies team and Dr. Anas Mahmoud; the Stephenson Disaster
+          Management Institute; the AISx Lab and Dr. James Ghawaly; my HNRS 3025 team and our sponsor, Shell; my Break Through
+          Tech AI Studio team and Abt Global; and Chevron's DealAId team. Each entry describes my own contribution. Chevron
+          descriptions exclude internal code, data, and screenshots, and all images are my own or my teams' unless captioned otherwise.
         </p>
       </section>
 
