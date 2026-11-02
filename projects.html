@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Madison Harman — Projects</title>
+  <meta name="description" content="Selected projects by Madison Harman: virtual-patient training simulation, Roomies app design, hurricane outage prediction, 3D point cloud benchmarks, an agentic Teams chatbot, and more.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="favicon.ico" sizes="32x32">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#461d7c">
+  <meta property="og:image" content="assets/brand/mark-512.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html" aria-label="Madison Harman, home">
+        <img src="assets/brand/logo-mark.svg" alt="" width="36" height="36">
+        <span class="brand-name">Madison Harman</span>
+      </a>
+      <nav aria-label="Primary">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-nav">Menu</button>
+        <ul id="primary-nav">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" style="padding-bottom:2rem;">
+      <div class="wrap">
+        <span class="eyebrow">Projects</span>
+        <h1>Work I'm proud of.</h1>
+        <p class="lede">
+          Applied machine learning, geospatial data engineering, 3D computer vision, and interfaces built for
+          real users. Current work first; each entry notes what I personally did and what evidence it provides.
+        </p>
+        <div class="project-jump" aria-label="Jump to project">
+          <a href="#virtual-patient">Virtual-patient training</a>
+          <a href="#roomies">Roomies</a>
+          <a href="#powercast">POWERCAST</a>
+          <a href="#point-cloud">3D benchmark</a>
+          <a href="#chevron-bot">Chevron chatbot</a>
+          <a href="#shell">Shell seal analysis</a>
+          <a href="#abt-global">Abt Global AI Studio</a>
+          <a href="#resource-requests">Resource-request extraction</a>
+          <a href="#jane-eyre">Jane Eyre × Lana Del Rey</a>
+          <a href="#coursework">Coursework</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="wrap">
+
+      <h2 class="eyebrow" style="margin-top:2rem;">Current work</h2>
+
+      <!-- ============ 01 VIRTUAL PATIENT ============ -->
+      <article class="project" id="virtual-patient" style="border-top:0; padding-top:1rem;">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">01 · Honors capstone thesis · LSU RISE Lab · Dr. Felipe Fronchetti · <span class="status">In progress</span></div>
+            <h2>PATRICIA: virtual-patient communication training</h2>
+            <p>
+              A simulation application that lets healthcare learners practice difficult conversations — such as
+              substance-use discussions — with AI-driven virtual patients and family members, then receive feedback on
+              both what they covered and how they communicated. I own the <strong>Coaching AI</strong>: the part of the
+              system that decides whether a learner actually met each communication objective, and tells them why.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag written">Written</span>
+              <span class="tag plain">LLM prompt engineering</span><span class="tag plain">Rubric design</span><span class="tag plain">Unity integration</span><span class="tag plain">Evaluation</span>
+            </div>
+            <details open>
+              <summary>My contribution: the Coaching AI</summary>
+              <h4>Turning a rubric into something a model can check</h4>
+              <p>
+                "Showed empathy" or "asked about substance use without judgment" is easy for an instructor to recognize and
+                hard for software to detect. I build representations of each objective's completion conditions and rubric so
+                the system can determine, from the conversation transcript, whether an objective was met.
+              </p>
+              <h4>Feedback tied to evidence</h4>
+              <p>
+                A score alone doesn't teach anything. The Coaching AI generates feedback that points to the specific moments
+                in the conversation behind each judgment, so learners can see what worked and what to try differently.
+              </p>
+              <h4>Coaching that adapts to the learner</h4>
+              <p>
+                A beginner needs more guidance during a conversation; an expert needs to be left alone. I'm implementing
+                beginner, intermediate, and expert coaching policies that change when and how the system intervenes, and
+                defining the report payload that delivers results to the Unity front end.
+              </p>
+              <h4>Measuring whether it's right</h4>
+              <p>
+                My honors thesis centers on this system and a bounded validation study: comparing the Coaching AI's judgments
+                on objective completion and feedback quality against human-reviewed annotations, with error analysis of where
+                and why they disagree.
+              </p>
+                          <p class="related">The Coaching AI builds on the prompt engineering I first did for <a href="#shell">Shell's seal-inspection system</a>.</p>
+            </details>
+          </div>
+          <figure class="figure">
+            <img src="assets/patricia-main-menu.jpg" alt="PATRICIA patient communication training prototype in Unity: welcome screen with Start Training, Select Chapter, View Progress, and Settings buttons beside a virtual practice guide in scrubs." loading="lazy">
+            <figcaption>PATRICIA prototype main menu in Unity — six conversation scenarios across three difficulty levels. The Coaching AI powers the feedback and progress views.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- ============ 02 ROOMIES ============ -->
+      <article class="project" id="roomies">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">02 · Software engineering course · Team of five · <span class="status">In progress</span></div>
+            <h2>Roomies: a roommate management app</h2>
+            <p>
+              A mobile app concept for shared living — chores, expenses, house rules, and the awkward conversations in
+              between. Our team took it from a vision card and market analysis through user stories and non-functional
+              requirements into high-fidelity design.
+            </p>
+            <div class="tags">
+              <span class="tag visual">Visual</span>
+              <span class="tag written">Written</span>
+              <span class="tag plain">Figma</span><span class="tag plain">Hi-fi wireframes</span><span class="tag plain">User journey maps</span>
+            </div>
+            <details open>
+              <summary>My contribution</summary>
+              <h4>High-fidelity wireframes in Figma</h4>
+              <p>
+                I designed the hi-fi screens for onboarding, the home dashboard, and the app's core feature set, with
+                written descriptions explaining the intent behind each screen so teammates and reviewers could follow the
+                design reasoning without a walkthrough.
+              </p>
+              <h4>Onboarding that's friendly but safe</h4>
+              <p>
+                Roomies serves residents, resident assistants, and property managers — three roles with very different
+                permissions. The onboarding lets anyone pick the role that fits, but makes clear that choosing "RA" or
+                "Landlord" doesn't unlock anything on its own: those dashboards require a verified account, an invitation
+                code, or administrator approval. Warm illustration and plain language keep that security step from feeling
+                like a wall.
+              </p>
+              <h4>Making the app worth opening</h4>
+              <p>
+                A chore app nobody opens is useless. I explored engagement features — gentle nudges and light gamification —
+                so that the app rewards keeping up with shared responsibilities instead of just nagging about them.
+              </p>
+              <h4>User journey mapping</h4>
+              <p>
+                I mapped a roommate's journey from signup through their first resolved conflict, which surfaced gaps between
+                what our user stories promised and what the screens actually supported.
+              </p>
+                          <p class="related">The design side of my work comes from my <a href="about.html#education">Digital Media Arts &amp; Engineering minor</a>; my <a href="#jane-eyre"><em>Jane Eyre</em> × Lana Del Rey site</a> is another example.</p>
+            </details>
+          </div>
+          <div>
+            <figure class="figure">
+              <img src="assets/roomies-hifi.jpg" alt="Three Roomies hi-fi mobile screens in Figma: a welcome screen reading Better living, together with Get Started and Log In buttons; a role picker for Resident, Resident Assistant, or Landlord; and a Resident Assistant login screen." loading="lazy">
+              <figcaption>My hi-fi Figma screens: welcome, role selection, and verified RA login. Role choice alone never grants access — professional roles require an invitation or admin approval.</figcaption>
+            </figure>
+            <figure class="figure" style="margin-top:1rem; display:flex; align-items:center; gap:1rem; padding:1rem;">
+              <img src="assets/roomies-logo.png" alt="Roomies app icon: two friendly blob characters, one blue and one green, under a house roofline." loading="lazy" style="width:72px; height:auto; border-radius:16px;">
+              <figcaption style="padding:0;">The Roomies app icon — two roommates under one roof. The palette carries through every screen.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <h2 class="eyebrow" style="margin-top:3rem;">Research &amp; industry</h2>
+
+      <!-- ============ 03 POWERCAST ============ -->
+      <article class="project" id="powercast" style="border-top:0; padding-top:1rem;">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">03 · SDMI research · 2025–2026</div>
+            <h2>POWERCAST: predicting hurricane power outages by parish</h2>
+            <p>
+              A machine-learning pipeline that estimates how many customers in each Louisiana parish will lose power
+              during a landfalling hurricane, so emergency managers can pre-position crews and resources.
+              I owned the data pipeline end to end: from raw outage feeds to a feature table a model can learn from.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag written">Written</span>
+              <span class="tag plain">Python</span><span class="tag plain">pandas</span><span class="tag plain">GeoPandas</span>
+              <span class="tag plain">Google Earth Engine</span><span class="tag plain">scikit-learn</span>
+            </div>
+            <details open>
+              <summary>What I built</summary>
+              <h4>Cleaning data that lies</h4>
+              <p>
+                The raw PowerOutage.us feed forward-fills gaps, which quietly inflated Hurricane Ida's outage counts by
+                roughly a quarter. I audited the source, removed the forward-fill, and resampled every storm onto a
+                consistent timeline before anything else was built on top of it.
+              </p>
+              <h4>Nine storms, one training set</h4>
+              <p>
+                I extracted landfall ±7-day windows for nine training hurricanes (700K+ parish-hour rows), scored each
+                storm's coverage completeness, and recommended excluding two storms whose data was too sparse to trust.
+              </p>
+              <h4>Features from the physical world</h4>
+              <p>
+                I parsed HURDAT2 best-track data (including wind radii), built a parish-level Stage IV rainfall pipeline
+                that handles two different archive formats, and pulled vegetation, soil, and antecedent soil-moisture
+                features from Google Earth Engine — then merged all of it into a single 50+ column feature table.
+              </p>
+              <h4>Modeling and what the baseline taught us</h4>
+              <p>
+                A Random Forest baseline performs best so far, with rainfall dominating feature importance. Leave-one-storm-out
+                validation exposed systematic over- and under-prediction tied to missing storm-severity features and a
+                coordinate-system bug in the distance-from-storm calculation — both documented for the next iteration.
+              </p>
+              <h4>Why this matters for communication</h4>
+              <p>
+                Every phase is written up as a technical note for my supervisor and teammates: what was done, what broke,
+                and what we decided. Those notes are the reason the next person can pick the pipeline up without me.
+              </p>
+                          <p class="related">Part of my <a href="experience.html#exp-sdmi">research role at SDMI</a>, alongside the <a href="#resource-requests">resource-request pipeline</a>.</p>
+            </details>
+          </div>
+          <div>
+            <figure class="figure">
+              <a href="https://powercast.sdmi.lsu.edu" target="_blank" rel="noopener">
+                <img src="assets/powercast-dashboard.jpg" alt="POWERCAST forecasting dashboard: a Louisiana parish map shaded by predicted outage severity along a hurricane track, with a parish ranking list and summary figures for customers affected, restoration hours, economic impact, and generators needed." loading="lazy">
+              </a>
+              <figcaption>The POWERCAST dashboard running a Category 4 exercise scenario: predicted outage severity by parish, ranked parishes, and estimated restoration time. Select to open the live site.</figcaption>
+            </figure>
+            <p style="margin-top:.8rem;"><a href="https://powercast.sdmi.lsu.edu" target="_blank" rel="noopener">Visit powercast.sdmi.lsu.edu ↗</a></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 04 POINT CLOUD ============ -->
+      <article class="project" id="point-cloud">
+        <div style="max-width:760px;">
+            <div class="kicker">04 · AISx Lab · National Park Service–funded · 2026</div>
+            <h2>3D computer-vision benchmark for historic structures</h2>
+            <p>
+              Historic buildings are scanned with LiDAR and photogrammetry, but a computer can't analyze a structure it
+              can't name. I produce the ground-truth semantic labels — roof, wall, window, foundation, and more — that
+              turn raw scans into a benchmark dataset for structural analysis in preservation.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag written">Written</span>
+              <span class="tag visual">Visual</span>
+              <span class="tag plain">CloudCompare</span><span class="tag plain">LiDAR</span><span class="tag plain">Python</span><span class="tag plain">E57</span>
+            </div>
+            <details open>
+              <summary>What I do</summary>
+              <h4>Consistent labels across scenes</h4>
+              <p>
+                I've annotated multiple full building scans in CloudCompare. The hard part isn't clicking points — it's
+                deciding, and documenting, the edge cases: does a chimney belong to the roof? Is a dormer side a wall or a
+                slope? Each scene ships with a labeling-notes file so every annotator makes the same call.
+              </p>
+              <h4>Tooling when the reference material is missing</h4>
+              <p>
+                When reference PDFs weren't available for a scan, I wrote a Python script that extracts the embedded
+                photographs from the raw .e57 scan files, giving the team visual context to label against.
+              </p>
+              <h4>Coordinating with a partner annotator</h4>
+              <p>
+                Labeling conventions only work if everyone follows them. I coordinate with a fellow annotator to resolve
+                disagreements and keep the conventions document current as new building types appear.
+              </p>
+                          <p class="related">Part of my <a href="experience.html#exp-aisx">research assistantship at the AISx Lab</a>.</p>
+            </details>
+          </div>
+      </article>
+
+      <!-- ============ 05 CHEVRON ============ -->
+      <article class="project" id="chevron-bot">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">05 · Chevron · Software Engineering Intern · Summer 2025</div>
+            <h2>Agentic Microsoft Teams chatbot for a deal-analysis team</h2>
+            <p>
+              During my first industry internship, I built a tool for Chevron's DealAId team to use in their daily workflow.
+              It's a Microsoft Teams chatbot, written in Python on the Azure Bot Framework, that brings an agentic AI assistant into
+              Teams, where they already work — with interactive UI elements instead of plain text prompts, and secure file upload so documents
+              could be handled inside the chat.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag spoken">Spoken</span>
+              <span class="tag plain">Python</span><span class="tag plain">Azure Bot Framework</span><span class="tag plain">Agentic AI</span><span class="tag plain">Microsoft Teams</span>
+            </div>
+            <details open>
+              <summary>What went into it</summary>
+              <h4>Meeting users where they work</h4>
+              <p>
+                Building inside Teams meant the team didn't have to adopt another app. The challenge was making a chat window
+                feel like a tool: interactive cards and buttons guide users through tasks rather than leaving them to guess
+                what to type.
+              </p>
+              <h4>Security from the start</h4>
+              <p>
+                File upload made the bot far more useful and far more sensitive. I built it in as a secure capability from the
+                beginning rather than adding it at the end.
+              </p>
+              <h4>Built with constant feedback</h4>
+              <p>
+                Daily standups and frequent check-ins with my supervisors kept the bot aligned with what the team needed as
+                the project evolved. <a href="experience.html#leadership">How that shaped my approach to leadership →</a>
+              </p>
+              <p><small>Internal code, data, and screenshots are not shared; this covers only the publicly describable scope of the work.</small></p>
+                          <p class="related">Part of my <a href="experience.html#exp-chevron">Chevron internship</a>, where I also served as an <a href="experience.html#leadership">intern housing liaison</a>.</p>
+            </details>
+          </div>
+          <figure class="figure">
+            <img src="assets/chevron-interns-leadership.jpg" alt="Madison and three fellow Chevron interns posing with a Chevron executive in front of a Chevron 'the human energy company' backdrop." loading="lazy">
+            <figcaption>With fellow interns and Chevron leadership at the Houston campus, summer 2025.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- ============ 06 SHELL ============ -->
+      <article class="project" id="shell">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">06 · HNRS 3025: LLM Development for Business · Sponsored by Shell · Spring 2025</div>
+            <h2>Shell Yeah! — AI vision for security-seal compliance</h2>
+            <p>
+              Shell hopper railcars carry a security seal that has to be intact and correctly placed before the car moves.
+              Checking that by hand is slow and inconsistent. Our team of seven built an AI vision system that reads a
+              photo of the seal, decides whether it complies, and logs the result through an automated reporting system.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag spoken">Spoken</span>
+              <span class="tag visual">Visual</span>
+              <span class="tag plain">Python</span><span class="tag plain">OpenAI API</span><span class="tag plain">PIL</span><span class="tag plain">JSON / base64</span>
+            </div>
+            <details open>
+              <summary>My role: prompt engineer</summary>
+              <h4>Teaching a vision model what "compliant" means</h4>
+              <p>
+                As the team's prompt engineer, I wrote the instructions that tell the vision model how to judge a seal
+                against Shell's compliance requirements, and shaped its output so the reporting system could log each
+                result automatically. The system was built in Python with the OpenAI API, using PIL and base64 to prepare
+                images and JSON to structure results.
+              </p>
+              <h4>Weekly reporting to Shell</h4>
+              <p>
+                Every week we presented progress to Shell representatives — documentation and code, not just slides. Explaining
+                what changed, what still failed, and what we planned next to an industry sponsor every week taught me to keep
+                technical updates short, honest, and tied to what the sponsor actually needed.
+              </p>
+              <h4>Final presentation</h4>
+              <p>
+                The semester ended with a final presentation of the completed system to Shell.
+              </p>
+                          <p class="related">Reporting to a sponsor every week was practice for the <a href="experience.html#leadership">daily standups at Chevron</a> that summer. The prompt-engineering experience led directly to my role on <a href="#virtual-patient">PATRICIA's Coaching AI</a>.</p>
+            </details>
+            <p style="margin-top:1rem;">
+              <a href="https://www.linkedin.com/posts/madison-harman-290242289_ai-llm-computervision-activity-7330211863852384256-KEgb/" target="_blank" rel="noopener">Read my LinkedIn post about the project ↗</a>
+            </p>
+          </div>
+          <div>
+            <figure class="figure">
+              <img src="assets/shell-team.jpg" alt="The seven-person Shell Yeah! team standing together in business attire after the final presentation at LSU." loading="lazy">
+              <figcaption>Our team after the final presentation to Shell, Spring 2025.</figcaption>
+            </figure>
+            <figure class="figure" style="margin-top:1rem;">
+              <img src="assets/shell-title-slide.jpg" alt="Title slide reading Shell Yeah! with the team members' names, sponsored by Shell." loading="lazy">
+              <figcaption>Title slide from our sponsor presentation.</figcaption>
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ 07 ABT GLOBAL ============ -->
+      <article class="project" id="abt-global">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">07 · Break Through Tech AI Studio · Abt Global · Fall 2024</div>
+            <h2>Weather conditions and COVID-19 rates</h2>
+            <p>
+              Does weather move infection rates? As part of Break Through Tech's AI Studio, our team of five worked with
+              Abt Global to find out — applying machine-learning models to COVID-19 case and weather data and delivering
+              the findings to Abt stakeholders.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag spoken">Spoken</span>
+              <span class="tag written">Written</span>
+              <span class="tag plain">Python</span><span class="tag plain">pandas</span><span class="tag plain">scikit-learn</span><span class="tag plain">Matplotlib</span><span class="tag plain">Jupyter</span>
+            </div>
+            <details open>
+              <summary>What we did</summary>
+              <h4>100,000+ rows, two very different sources</h4>
+              <p>
+                Working in Jupyter Notebooks with NumPy and pandas, we combined COVID-19 case data with weather records and
+                analyzed more than 100,000 rows to look for relationships between the two.
+              </p>
+              <h4>Machine learning to find the signal</h4>
+              <p>
+                We applied scikit-learn models to test which weather patterns correlated with case rates, and used Matplotlib
+                to turn the results into visuals stakeholders could read at a glance.
+              </p>
+              <h4>Insights for stakeholders</h4>
+              <p>
+                We delivered actionable insights to Abt Global stakeholders in a final presentation through Break Through
+                Tech's program at Cornell Tech — translating model output into findings a public-health audience could use.
+              </p>
+                          <p class="related">Part of my <a href="experience.html#exp-btt">Break Through Tech AI fellowship</a>, where I'm now an <a href="experience.html#community">ambassador</a>.</p>
+            </details>
+            <p style="margin-top:1rem;">
+              <a href="https://github.com/iiqueenizzy13/AbtGlobal_1B" target="_blank" rel="noopener">Team repository on GitHub ↗</a>
+            </p>
+          </div>
+          <figure class="figure">
+            <img src="assets/abt-title-slide.jpg" alt="Title slide: ABT Global — Uncovering Relations Between Weather Conditions and COVID-19 Rates, AI Studio Final Presentation, Break Through Tech at Cornell Tech, December 6, 2024." loading="lazy">
+            <figcaption>Opening slide of our AI Studio final presentation, December 2024.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- ============ 08 RESOURCE REQUESTS ============ -->
+      <article class="project" id="resource-requests">
+        <div style="max-width:760px;">
+            <div class="kicker">08 · SDMI · Disaster response</div>
+            <h2>LLM-based extraction of emergency resource requests</h2>
+            <p>
+              During a hurricane response, requests for generators, water, cots, and fuel arrive as free text in mission
+              spreadsheets. I contributed to a pipeline that uses a large language model to extract and categorize those
+              physical resources, validates the output, and writes GeoJSON so requests can be mapped.
+            </p>
+            <div class="tags">
+              <span class="tag tech">Technological</span>
+              <span class="tag plain">Python</span><span class="tag plain">LLM / GPT-4o-mini</span><span class="tag plain">GeoJSON</span>
+            </div>
+            <details>
+              <summary>My contribution</summary>
+              <p>
+                I fixed classification errors, added canonicalization logic so "gen", "generator", and "generators" resolve
+                to one resource type, implemented GeoJSON output for mapping, and added checkpoint/resume support so a
+                long-running job can recover from an interruption without reprocessing everything.
+              </p>
+                          <p class="related">Also part of my <a href="experience.html#exp-sdmi">SDMI role</a>; see <a href="#powercast">POWERCAST</a> for the other side of that work.</p>
+            </details>
+          </div>
+      </article>
+
+      <h2 class="eyebrow" style="margin-top:3rem;">Creative &amp; coursework</h2>
+
+      <!-- ============ 09 JANE EYRE ============ -->
+      <article class="project" id="jane-eyre" style="border-top:0; padding-top:1rem;">
+        <div class="project-grid">
+          <div>
+            <div class="kicker">09 · HNRS 2030 Un-Essay · Spring 2024</div>
+            <h2>Power, God, and Love: <em>Jane Eyre</em> × Lana Del Rey</h2>
+            <p>
+              An honors "un-essay" that argues a literary thesis through a website instead of a paper. While reading
+              <em>Jane Eyre</em>, I noticed a strong connection between Jane and Rochester's relationship and the themes in
+              Lana Del Rey's songs. The site walks through their relationship chronologically and compares each turning
+              point with a Lana Del Rey song, showing how romance shaped all three.
+            </p>
+            <div class="tags">
+              <span class="tag written">Written</span>
+              <span class="tag visual">Visual</span>
+              <span class="tag tech">Technological</span>
+              <span class="tag plain">HTML</span><span class="tag plain">CSS</span><span class="tag plain">JavaScript</span>
+            </div>
+            <details open>
+              <summary>Why a website</summary>
+              <h4>Form that matches the argument</h4>
+              <p>
+                I built the site from scratch in HTML, CSS, and JavaScript because a website could be interactive yet
+                informative in a way a paper couldn't. Each moment in Jane and Rochester's relationship gets its own page
+                paired with a song, with a Spotify playlist alongside, so readers can move through the comparison instead
+                of just reading about it.
+              </p>
+              <h4>Original analysis</h4>
+              <p>
+                I found no existing academic work pairing these two, so the interpretation is my own, drawing on the novel's
+                historical context and its literary representations. The analysis traces how personal growth and romance
+                intertwine in Western culture, and argues that change is essential to growing as a person.
+              </p>
+                          <p class="related">Where my CS major first met my <a href="about.html#education">Digital Media Arts &amp; Engineering minor</a>, a combination that also shapes <a href="#roomies">Roomies</a>.</p>
+            </details>
+            <p style="margin-top:1rem;">
+              <a href="https://madisonharman.github.io/Jane-Eyre.x.Lana-Del-Rey/" target="_blank" rel="noopener">Visit the site ↗</a> ·
+              <a href="https://github.com/MadisonHarman/Jane-Eyre.x.Lana-Del-Rey" target="_blank" rel="noopener">Source on GitHub ↗</a>
+            </p>
+          </div>
+          <figure class="figure">
+            <a href="https://madisonharman.github.io/Jane-Eyre.x.Lana-Del-Rey/" target="_blank" rel="noopener">
+              <img src="assets/jane-eyre-site.jpg" alt="Landing page of the Jane Eyre × Lana Del Rey un-essay website, titled Power, God, and Love, with an overview essay over a dark photo collage." loading="lazy">
+            </a>
+            <figcaption>The site's overview page. Select to open the live site.</figcaption>
+          </figure>
+        </div>
+      </article>
+
+      <!-- ============ 10 COURSEWORK ============ -->
+      <article class="project" id="coursework">
+        <div class="kicker">10 · Selected systems coursework</div>
+        <h2>Work that keeps me honest.</h2>
+        <p class="lede">Research is my focus, but I like knowing what's under the floorboards.</p>
+        <div class="grid-3" style="margin-top:1.5rem;">
+          <div class="card">
+            <h3>Multi-mode HTTP server in C</h3>
+            <p>Implemented fork-, thread-, and pool-based concurrency models for a web server from scratch; full marks on the assignment.</p>
+            <div class="tags"><span class="tag tech">Technological</span></div>
+          </div>
+          <div class="card">
+            <h3>Geaux-to-C compiler code generator</h3>
+            <p>Team project: built a three-pass code emitter with global variable scoping and fixed AST mismatches between front- and back-end.</p>
+            <div class="tags"><span class="tag tech">Technological</span></div>
+          </div>
+          <div class="card">
+            <h3>Digital forensics investigation</h3>
+            <p>Analyzed a disk image and packet capture to reconstruct an incident, delivered as a formal written report and a presentation.</p>
+            <div class="tags"><span class="tag written">Written</span><span class="tag spoken">Spoken</span></div>
+          </div>
+        </div>
+      </article>
+
+      <!-- ============ CREDITS ============ -->
+      <section id="credits" style="padding-top:3rem;">
+        <span class="eyebrow">Credits &amp; collaboration</span>
+        <h2 style="font-size:1.5rem;">Who I worked with.</h2>
+        <p>
+          The PATRICIA virtual-patient training application is an Honors capstone team project at the LSU RISE Laboratory under Dr. Felipe Fronchetti; I own the
+          Coaching AI component, and teammates build the Unity application and virtual characters. Roomies was designed with Elizabeth Odukoya, Alexandra Hawk, Jenah Mansour, and Nour Khalifa;
+          the Figma hi-fi screens, app icon, and journey map are my individual work. POWERCAST and the resource-request pipeline are
+          SDMI team projects supervised by Robert Iles. The 3D benchmark is led by Dr. Ghawaly at the AISx Lab.
+          <em>Shell Yeah!</em> was built with Garrett Wainright, Fahd Khattak, Damien Nguyen, Hammaad Alam, Serene Qasem,
+          and Kameron Arceneaux for HNRS 3025, sponsored by Shell. The Abt Global AI Studio project was a five-person
+          Break Through Tech team; the repository is shared. Chevron descriptions exclude internal code, data, and
+          screenshots. The <em>Jane Eyre</em> × Lana Del Rey site is my individual work; song references are to Lana Del Rey's
+          published recordings, and the novel is Charlotte Brontë's. All photographs and figures are my own or my teams' unless
+          captioned otherwise.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <div class="footer-brand"><img src="assets/brand/logo-mark.svg" alt="" width="22" height="22"> © <span id="year"></span> Madison Harman · B.S. Computer Science, LSU · May 2027</div>
+      <div>
+        <a href="mailto:mharma6@lsu.edu">Email</a>
+        <a href="https://www.linkedin.com/in/madison-harman-290242289/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://github.com/MadisonHarman" target="_blank" rel="noopener">GitHub</a>
+        <a href="assets/madison-harman-resume.pdf" download>Résumé (PDF)</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
